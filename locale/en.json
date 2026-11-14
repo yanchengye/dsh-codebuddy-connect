@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "CodeBuddy models",
+    "description": "Serves CodeBuddy's chat models to this harness. Store an API key once; the bundle also provides browser sign-in, live credit multipliers, and a cycle-balance readout."
+  }
+}

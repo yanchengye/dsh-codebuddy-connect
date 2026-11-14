@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "CodeBuddy 模型",
+    "description": "把 CodeBuddy 的对话模型接入 harness：保存 API Key 后即可在模型选择器中使用，并提供浏览器登录、实时倍率与周期额度显示。"
+  }
+}

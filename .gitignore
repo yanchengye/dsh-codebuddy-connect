@@ -1,0 +1,6 @@
+# Packing output from `npm pack`; the repo holds sources, not artifacts.
+*.tgz
+
+# Editor and OS noise.
+.DS_Store
+node_modules/

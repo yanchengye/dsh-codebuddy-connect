@@ -1,0 +1,61 @@
+{
+  "name": "dsh-codebuddy-connect",
+  "version": "1.0.0",
+  "displayName": "DSH Connect CodeBuddy",
+  "type": "module",
+  "description": "Brings CodeBuddy models into DeepSeek Harness: a provider route through the shared pi-ai bridge, a settings panel for the API key and browser sign-in, live credit multipliers, and a cycle-balance readout in the session header.",
+  "icon": "./icon.svg",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "codebuddy",
+    "model-provider"
+  ],
+  "license": "MIT",
+  "author": "yanchengye",
+  "homepage": "https://github.com/yanchengye/dsh-codebuddy-connect#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanchengye/dsh-codebuddy-connect.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yanchengye/dsh-codebuddy-connect/issues"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "locale/*.json",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  }
+}
